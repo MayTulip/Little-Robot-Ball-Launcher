@@ -60,7 +60,7 @@ cam = picamera.PiCamera()
 # display title page
 screen.fill(WHITE) # Erase the Work space
 
-title_img = pygame.image.load('title.jpg')
+title_img = pygame.image.load('image/title.jpg')
 title_img = pygame.transform.scale(title_img, (240, 200))
 screen.blit(title_img,(40,40))
 
@@ -71,7 +71,7 @@ pygame.display.flip() # display workspace on screen
 
 # start music
 mixer.init()
-mixer.music.load('/home/pi/final_project/music.mp3')
+mixer.music.load('image/music.mp3')
 mixer.music.play()
 music_timer = time.time()
 
@@ -90,15 +90,15 @@ while (q == False):
 
         if mode == 0:
                 # display page to select mode
-                blue_button = pygame.image.load('blue.png')
+                blue_button = pygame.image.load('image/blue.png')
                 blue_button = pygame.transform.scale(blue_button, (140, 40))
                 screen.blit(blue_button,(30,100))
 
-                yellow_button = pygame.image.load('yellow.jpg')
+                yellow_button = pygame.image.load('image/yellow.jpg')
                 yellow_button = pygame.transform.scale(yellow_button, (100, 40))
                 screen.blit(yellow_button,(200,100))
 
-                red_button = pygame.image.load('red.png')
+                red_button = pygame.image.load('image/red.png')
                 red_button = pygame.transform.scale(red_button, (80, 40))
                 screen.blit(red_button,(42,200))
                 
@@ -133,7 +133,7 @@ while (q == False):
                 pr.ChangeDutyCycle(100*1.3/21.3)  
 
                 # display page with quit button
-                red_button = pygame.image.load('red.png')
+                red_button = pygame.image.load('image/red.png')
                 red_button = pygame.transform.scale(red_button, (80, 40))
                 screen.blit(red_button,(42,200))
 
@@ -183,7 +183,7 @@ while (q == False):
                                         
                         if(detected):
                                 # display page with sad Tom
-                                detected_img = pygame.image.load('detected.jpg')
+                                detected_img = pygame.image.load('image/detected.jpg')
                                 detected_img = pygame.transform.scale(detected_img, (245, 200))
                                 screen.blit(detected_img,(40,0))
 
@@ -301,7 +301,7 @@ while (q == False):
                                 # display firing page
                                 screen.fill(WHITE) # Erase the Work space
 
-                                fire_img = pygame.image.load('fire.jpeg')
+                                fire_img = pygame.image.load('image/fire.jpeg')
                                 fire_img = pygame.transform.scale(fire_img, (240, 240))
                                 screen.blit(fire_img,(40,0))
 
@@ -315,23 +315,23 @@ while (q == False):
         # manual mode
         else:
                 # display page with up, down, stop, aim buttons
-                red_button = pygame.image.load('red.png')
+                red_button = pygame.image.load('image/red.png')
                 red_button = pygame.transform.scale(red_button, (80, 40))
                 screen.blit(red_button,(42,200))
 
-                up_button = pygame.image.load('up.png')
+                up_button = pygame.image.load('image/up.png')
                 up_button = pygame.transform.scale(up_button, (80, 80))
                 screen.blit(up_button,(70,10))
 
-                down_button = pygame.image.load('down.png')
+                down_button = pygame.image.load('image/down.png')
                 down_button = pygame.transform.scale(down_button, (80, 80))
                 screen.blit(down_button,(170, 10))
 
-                stop_button = pygame.image.load('stop.png')
+                stop_button = pygame.image.load('image/stop.png')
                 stop_button = pygame.transform.scale(stop_button, (80, 80))
                 screen.blit(stop_button,(70,110))
 
-                aim_button = pygame.image.load('aim.jpg')
+                aim_button = pygame.image.load('image/aim.jpg')
                 aim_button = pygame.transform.scale(aim_button, (70, 70))
                 screen.blit(aim_button,(170, 110))
 
@@ -396,7 +396,7 @@ while (q == False):
                                 # display page with fire button
                                 screen.fill(WHITE) # Erase the Work space
 
-                                aim_button = pygame.image.load('aim.jpg')
+                                aim_button = pygame.image.load('image/aim.jpg')
                                 aim_button = pygame.transform.scale(aim_button, (80, 80))
                                 screen.blit(aim_button,(140, 50))
 
@@ -438,7 +438,7 @@ while (q == False):
                                         # display firing page
                                         screen.fill(WHITE) # Erase the Work space
 
-                                        fire_img = pygame.image.load('fire.jpeg')
+                                        fire_img = pygame.image.load('image/fire.jpeg')
                                         fire_img = pygame.transform.scale(fire_img, (240, 240))
                                         screen.blit(fire_img,(40,0))
 
@@ -468,11 +468,11 @@ while (q == False):
 # display end screen
 screen.fill(WHITE) # Erase the Work space
 
-end_img = pygame.image.load('end.jpg')
+end_img = pygame.image.load('image/end.jpg')
 end_img = pygame.transform.scale(end_img, (320, 240))
 screen.blit(end_img,(0,0))
 
-end_title = pygame.image.load('end_title.jpg')
+end_title = pygame.image.load('image/end_title.jpg')
 end_title = pygame.transform.scale(end_title, (120, 90))
 screen.blit(end_title,(200,0))
 
